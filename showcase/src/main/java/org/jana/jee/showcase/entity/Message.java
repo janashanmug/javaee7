@@ -81,8 +81,9 @@ public class Message {
         CONSTRAINT_VIOLATION(1001,Type.ERROR, ""),
         MOVIE_EXIST(2001,Type.ERROR, "Movie already exists, check identifier"),
         MOVIE_CREATED(2002,Type.INFO, "Movie created, refer link"),
-        MOVIE_NOT_FOUND(2003,Type.ERROR, "Movie not found"),
-        MOVIE_NOT_ACCEPTABLE(2004,Type.ERROR, "Movie could not be created");
+        MOVIE_DELETED(2003,Type.INFO,"Movie deleted"),
+        MOVIE_NOT_FOUND(2004,Type.ERROR, "Movie not found"),
+        MOVIE_NOT_ACCEPTABLE(2005,Type.ERROR, "Movie could not be created");
         
         private final int id;
         private final Type type;

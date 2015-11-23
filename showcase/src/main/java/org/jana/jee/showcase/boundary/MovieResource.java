@@ -145,7 +145,7 @@ public class MovieResource {
         if(result == 0) {
             return Response.status(Status.ACCEPTED)
                            .links(getTransitionalLinks(uriInfo, movie.getIdImdb()))
-                           .entity(movie)
+                           .entity(new Message(Message.Code.MOVIE_DELETED))
                            .build();
         } else {
             return Response.status(Status.NOT_ACCEPTABLE)
